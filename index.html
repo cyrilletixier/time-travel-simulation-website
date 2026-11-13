@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101c22">
+  <meta name="description" content="Time Travel Simulation : un jeu de simulation systémique où une entreprise organise des expéditions scientifiques à travers le temps.">
+  <title>Time Travel Simulation — Explorer le temps, comprendre le vivant</title>
+  <style>
+    :root{color-scheme:dark;--bg:#101c22;--panel:#192a30;--panel2:#20363a;--ink:#edf0e7;--muted:#aab9b0;--moss:#9db58a;--gold:#d5a64b;--blue:#79b7ca;--violet:#b39bd5;--line:#38504d}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+    a{color:var(--moss)}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}.brand{font-weight:800;letter-spacing:.08em;font-size:.85rem}.nav a{text-decoration:none;margin-left:22px;color:var(--muted);font-size:.9rem}
+    .hero{position:relative;overflow:hidden;padding:90px 0 84px;background:radial-gradient(ellipse at 78% 38%,#30483e 0,transparent 40%),linear-gradient(130deg,#101c22 20%,#172a2b 72%,#293c34)}
+    .hero:after{content:"";position:absolute;inset:auto -8% -190px 35%;height:380px;border:1px solid #8ba58a55;border-radius:50%;transform:rotate(-14deg);box-shadow:0 0 0 35px #8ba58a0b,0 0 0 70px #8ba58a09}
+    .eyebrow{color:var(--gold);font-size:.78rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}.hero h1{max-width:760px;font-size:clamp(2.8rem,7vw,5.7rem);line-height:1.02;letter-spacing:-.055em;margin:18px 0 24px}.hero h1 span{color:var(--moss)}.lead{max-width:650px;color:#c1cec5;font-size:1.15rem}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}.btn{display:inline-block;padding:13px 20px;border-radius:5px;text-decoration:none;font-weight:750}.primary{background:var(--moss);color:#132019}.secondary{border:1px solid #78918b;color:var(--ink)}
+    section{padding:78px 0}.section-head{max-width:720px;margin-bottom:34px}h2{font-size:clamp(2rem,4vw,3.1rem);line-height:1.1;letter-spacing:-.04em;margin:10px 0 16px}h3{margin:0 0 9px;font-size:1.15rem}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--panel);border:1px solid var(--line);padding:24px;border-radius:9px}.card p{color:var(--muted);margin-bottom:0}.number{font-size:.78rem;color:var(--gold);font-weight:800;letter-spacing:.12em}
+    .loop{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.step{padding:20px 16px;background:var(--panel2);border-top:2px solid var(--moss);border-radius:4px}.step b{display:block;margin:8px 0}.step p{margin:0;color:var(--muted);font-size:.92rem}
+    .vision{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}.scene{min-height:350px;border-radius:12px;overflow:hidden;position:relative;background:linear-gradient(180deg,#506c63 0%,#314b40 48%,#263c34 100%);border:1px solid #597365}.sun{position:absolute;width:95px;height:95px;border-radius:50%;background:#d8c58c;right:16%;top:13%;filter:blur(1px);box-shadow:0 0 60px #e8d49b77}.ridge{position:absolute;bottom:0;width:120%;height:60%;left:-10%;background:#263c34;clip-path:polygon(0 55%,15% 25%,29% 47%,44% 10%,59% 48%,73% 23%,100% 52%,100% 100%,0 100%)}.ridge.back{bottom:22%;background:#3b5949;opacity:.85;transform:scaleX(-1);height:45%}.tree{position:absolute;bottom:15%;width:0;height:0;border-left:26px solid transparent;border-right:26px solid transparent;border-bottom:95px solid #1c342c;filter:drop-shadow(0 7px 0 #142720)}.tree.t1{left:12%}.tree.t2{left:34%;transform:scale(.8)}.tree.t3{right:13%;transform:scale(1.2)}.camp{position:absolute;bottom:14%;left:53%;width:100px;height:62px;background:#b99b69;clip-path:polygon(50% 0,100% 100%,0 100%);filter:drop-shadow(0 0 9px #d5a64b55)}.camp:after{content:"";position:absolute;left:45%;top:48%;width:12px;height:35px;background:#243a34}
+    .manifesto{background:#17262a}.manifesto .grid{grid-template-columns:repeat(2,1fr)}.tag{display:inline-block;border:1px solid #5c776a;border-radius:30px;padding:5px 11px;color:var(--moss);font-size:.8rem;margin:5px 5px 0 0}
+    .signup{background:linear-gradient(135deg,#263c34,#192a30);border:1px solid #506c5a;border-radius:12px;padding:clamp(24px,5vw,52px);display:grid;grid-template-columns:1fr .8fr;gap:40px;align-items:center}.formbox{background:#101c22aa;padding:24px;border-radius:8px}.formbox label{display:block;font-weight:700;margin-bottom:8px}.formbox input{width:100%;padding:14px;border:1px solid #647d73;background:#192a30;color:white;border-radius:4px;font:inherit}.formbox button{width:100%;margin-top:12px;padding:13px;border:0;border-radius:4px;background:var(--moss);color:#142018;font:inherit;font-weight:800;cursor:pointer}.fine{font-size:.78rem;color:var(--muted)}.status{font-size:.85rem;color:var(--gold);min-height:1.5em}
+    footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:760px){.nav nav{display:none}.hero{padding:65px 0}.grid,.loop,.vision,.signup,.manifesto .grid{grid-template-columns:1fr}.scene{min-height:260px}.loop{gap:8px}section{padding:58px 0}}
+  </style>
+</head>
+<body>
+<header class="wrap nav"><div class="brand">◈ TIME TRAVEL SIMULATION</div><nav><a href="#concept">Le concept</a><a href="#gameplay">Gameplay</a><a href="#vision">Vision</a><a href="#contact">Suivre le projet</a></nav></header>
+<main>
+  <section class="hero"><div class="wrap">
+    <div class="eyebrow">Jeu de simulation systémique · En développement</div>
+    <h1>Le passé n'attend pas.<br><span>La science non plus.</span></h1>
+    <p class="lead">Bâtissez une entreprise spécialisée dans les voyages temporels. Préparez des expéditions scientifiques, envoyez vos équipes dans des époques inconnues et voyez comment elles s'organisent pour atteindre leurs objectifs… et revenir.</p>
+    <div class="actions"><a class="btn primary" href="#concept">Découvrir le projet</a><a class="btn secondary" href="#contact">Être informé du développement</a></div>
+  </div></section>
+  <section id="concept"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Le concept</div><h2>Une entreprise. Des équipes. Toute l'histoire à explorer.</h2><p class="muted">Time Travel Simulation mêle gestion d'entreprise, simulation de vie et exploration scientifique. Le joueur ne pilote pas chaque geste : il définit un cap, fournit des moyens et observe les décisions d'individus autonomes.</p></div>
+    <div class="grid">
+      <article class="card"><div class="number">01 / ENTREPRISE</div><h3>Préparer l'expédition</h3><p>Recrutez, développez les compétences, gérez les finances, choisissez le matériel et financez vos recherches.</p></article>
+      <article class="card"><div class="number">02 / EXPÉDITION</div><h3>Laisser vivre l'équipe</h3><p>Vos scientifiques ont des besoins, des compétences, une personnalité et des relations. Ils s'organisent, coopèrent et réagissent aux imprévus.</p></article>
+      <article class="card"><div class="number">03 / SCIENCE</div><h3>Transformer les découvertes</h3><p>Observations, échantillons et données alimentent vos connaissances, vos contrats et l'accès à de nouvelles destinations temporelles.</p></article>
+    </div>
+  </div></section>
+  <section id="gameplay" class="manifesto"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">La boucle de jeu</div><h2>Découvrir, comprendre, repartir.</h2><p class="muted">Chaque expédition doit produire des choix, des conséquences et des histoires émergentes — pas seulement remplir une liste d'objectifs.</p></div>
+    <div class="loop">
+      <div class="step"><span class="number">ÉTAPE 1</span><b>Identifier une destination</b><p>Détecter des anomalies et reconstituer des coordonnées spatio-temporelles.</p></div>
+      <div class="step"><span class="number">ÉTAPE 2</span><b>Préparer la mission</b><p>Composer l'équipe, choisir l'équipement et sécuriser l'énergie du voyage aller-retour.</p></div>
+      <div class="step"><span class="number">ÉTAPE 3</span><b>Explorer et s'adapter</b><p>Observer un monde vivant, gérer les besoins et faire face aux incidents.</p></div>
+      <div class="step"><span class="number">ÉTAPE 4</span><b>Rapporter les résultats</b><p>Valider les données, financer la suite et ouvrir de nouvelles pistes de recherche.</p></div>
+    </div>
+  </div></section>
+  <section id="vision"><div class="wrap vision">
+    <div><div class="eyebrow">Une simulation vivante</div><h2>Le joueur donne la direction. Le monde écrit les détails.</h2><p class="muted">Les personnages ne sont pas de simples pions. La faim, la fatigue, la météo, les blessures, les compétences et les relations influencent leurs décisions. Une priorité collective peut être bouleversée par un besoin vital ou un événement inattendu.</p><p class="muted">La direction artistique associe des personnages d'inspiration anime à des environnements naturalistes, observés en vue de dessus.</p><div><span class="tag">IA autonome</span><span class="tag">Monde procédural</span><span class="tag">Recherche scientifique</span><span class="tag">Voyage temporel</span></div></div>
+    <div class="scene" role="img" aria-label="Illustration stylisée d'une clairière forestière avec un camp d'expédition"><div class="sun"></div><div class="ridge back"></div><div class="ridge"></div><div class="tree t1"></div><div class="tree t2"></div><div class="tree t3"></div><div class="camp"></div></div>
+  </div></section>
+  <section class="manifesto"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Où en est le projet ?</div><h2>Le socle du prototype est en construction.</h2><p class="muted">Le dépôt contient une première fondation jouable sous Godot : une carte générée, quatre agents, des déplacements autonomes, des besoins simples et un journal d'événements. Les systèmes de simulation seront enrichis progressivement.</p></div>
+    <div class="grid"><article class="card"><h3>Prototype 0.1</h3><p>Carte 64×64, quatre personnages, navigation, simulation par ticks et contrôles de vitesse.</p></article><article class="card"><h3>Prochaines étapes</h3><p>Approfondir les besoins, l'IA décisionnelle, la gestion des tâches, le monde vivant et les objectifs scientifiques.</p></article><article class="card"><h3>Technologie</h3><p>Godot 4, GDScript typé, génération déterministe et architecture modulaire pensée pour évoluer.</p></article></div>
+  </div></section>
+  <section id="contact"><div class="wrap signup">
+    <div><div class="eyebrow">Suivre le développement</div><h2>Envie de suivre l'aventure ?</h2><p class="muted">Laissez votre adresse e-mail pour recevoir des nouvelles du projet, des étapes du prototype et des futures possibilités de test.</p><p class="fine">Une seule information demandée : votre adresse e-mail. Pas de newsletter commerciale ni de partage volontaire de votre adresse avec des partenaires.</p></div>
+    <div class="formbox"><form id="interest-form" method="POST">
+      <label for="email">Votre adresse e-mail</label><input id="email" name="email" type="email" autocomplete="email" placeholder="vous@exemple.fr" required>
+      <button type="submit">Je souhaite suivre le projet</button><p class="status" id="form-status" aria-live="polite">Formulaire en attente de configuration de la collecte.</p>
+      <p class="fine">L'envoi sera activé après raccordement à un service de collecte sécurisé. Vous pourrez demander le retrait de votre adresse à tout moment.</p>
+    </form></div>
+  </div></section>
+</main>
+<footer class="wrap"><span>© Time Travel Simulation — Projet indépendant en développement</span><a href="https://github.com/cyrilletixier/time-travel-simulation-website">Code du site</a></footer>
+<script>
+  // Après création du formulaire Formspree, remplacer cette valeur par son endpoint.
+  const FORM_ENDPOINT = "";
+  const form = document.getElementById("interest-form");
+  const status = document.getElementById("form-status");
+  form.addEventListener("submit", (event) => {
+    if (!FORM_ENDPOINT) {
+      event.preventDefault();
+      status.textContent = "La collecte n'est pas encore activée. Aucune adresse n'a été envoyée.";
+      return;
+    }
+    form.action = FORM_ENDPOINT;
+  });
+</script>
+</body>
+</html>
